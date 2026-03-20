@@ -172,7 +172,7 @@ function loadUser() {
 
 function logout() {
     localStorage.clear();
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 }
 
 window.onload = function () {
