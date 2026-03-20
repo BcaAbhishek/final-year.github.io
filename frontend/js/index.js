@@ -14,7 +14,7 @@ async function uploadResume() {
     const formData = new FormData();
     formData.append("resume", file);
 
-    const res = await fetch("http://localhost:5000/api/resume/analyze", {
+    const res = await fetch("https://finalyear-project-github-io.onrender.com/api/resume/analyze", {
         method: "POST",
         body: formData
     });
@@ -124,7 +124,7 @@ async function sendMessage() {
 
     chatBody.innerHTML += "<p><b>You:</b> " + input + "</p>";
 
-    const res = await fetch("http://localhost:5000/api/chatbot/chat", {
+    const res = await fetch("https://finalyear-project-github-io.onrender.com/api/chatbot/chat", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
