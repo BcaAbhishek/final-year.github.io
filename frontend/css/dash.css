@@ -1,0 +1,83 @@
+.dashboard {
+    padding: 60px;
+    text-align: center;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.card button {
+    padding: 10px;
+    background: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background: #0056cc;
+}
+
+#chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    font-family: Arial;
+}
+
+#chat-header {
+    background: #0077ff;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#chat-body {
+    height: 200px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#chat-input-area {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+#chat-input-area input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+}
+
+#chat-input-area button {
+    background: #0077ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}

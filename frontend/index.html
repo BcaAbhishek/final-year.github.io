@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Resume Analyzer</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <!-- BACKGROUND VIDEO -->
+    <video autoplay muted loop id="bg-video">
+        <source src="videos/homepage.mp4" type="video/mp4">
+    </video>
+    
+    <div class="profile">
+        <h3>Welcome, <span id="username"></span> 👋</h3>
+        <img id="avatar" />
+        <span id="username"></span>
+
+        <button onclick="logout()">Logout</button>
+
+    </div>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h1 class="cool-text">AI Resume Analyzer </h1>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Upload Resume & Get AI Career Insights</h1>
+        <p>Skills • Salary • Jobs • Cities • Improvements</p>
+    </section>
+
+    <!-- UPLOAD -->
+    <section class="upload-section">
+        <h2>Upload Your Resume</h2>
+
+        <input type="file" id="resume">
+        <br><br>
+
+        <button onclick="uploadResume()">Analyze Resume</button>
+    </section>
+
+    <!-- LOADER -->
+    <div id="loader">Analyzing Resume...</div>
+
+    <!-- RESULTS -->
+    <section class="results">
+
+        <div class="dashboard-container">
+
+            <div class="card">
+                <h3>🧠 Skills</h3>
+                <p id="skills"></p>
+            </div>
+
+            <div class="card">
+                <h3>💼 Job Roles</h3>
+                <p id="roles"></p>
+            </div>
+
+            <div class="card">
+                <h3>💰 Salary</h3>
+                <p id="salary"></p>
+            </div>
+
+            <div class="card">
+                <h3>🌍 Best Cities</h3>
+                <p id="cities"></p>
+            </div>
+
+            <div class="card">
+                <h3>📈 Improvements</h3>
+                <p id="improve"></p>
+            </div>
+
+        </div>
+
+        <!-- CHART -->
+        <canvas id="salaryChart"></canvas>
+
+        <!-- HISTORY -->
+        <h2>📜 Previous Analyses</h2>
+        <ul id="history"></ul>
+
+    </section>
+
+    <!-- CHATBOT -->
+    <div class="chatbot-icon" onclick="toggleChat()">💬</div>
+
+    <div class="chatbot-window" id="chatbot">
+        <div class="chat-header">AI Career Bot</div>
+        <div class="chat-body" id="chatBody"></div>
+
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Ask something...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
