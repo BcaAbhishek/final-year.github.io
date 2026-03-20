@@ -23,7 +23,7 @@ async function login() {
             localStorage.setItem("token", data.token);
 
             // redirect
-            window.location.href = "index.html";
+            window.location.href = "home.html";
 
         } else {
             alert(data.message || "Login failed");
@@ -100,7 +100,7 @@ function handleGoogleResponse(response) {
 
             localStorage.setItem("token", data.token);
 
-            window.location.href = "index.html";
+            window.location.href = "home.html";
 
         })
         .catch(err => {
@@ -137,7 +137,7 @@ function handleGoogleResponse(response) {
 
             // redirect after 1 sec (nice UX)
             setTimeout(() => {
-                window.location.href = "index.html";
+                window.location.href = "home.html";
             }, 1000);
 
         })
