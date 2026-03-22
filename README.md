@@ -1,8 +1,11 @@
 🚀 AI Resume Analyzer & Job Insights Platform
 <p align="center"> <img src="https://img.shields.io/badge/Full%20Stack-Project-blue?style=for-the-badge" /> <img src="https://img.shields.io/badge/Status-Live-success?style=for-the-badge" /> <img src="https://img.shields.io/badge/Made%20With-JavaScript-yellow?style=for-the-badge" /> <img src="https://img.shields.io/badge/Backend-Node.js-green?style=for-the-badge" /> <img src="https://img.shields.io/badge/Database-MongoDB-brightgreen?style=for-the-badge" /> </p>
+
 🌐 Live Demo
 
+
 🚀 Frontend: https://finalyear-project-github-io.vercel.app
+
 ⚙️ Backend: https://finalyear-project-github-io.onrender.com
 
 🎥 Preview
