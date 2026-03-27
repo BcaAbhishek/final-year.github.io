@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Job Matcher</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" type="image/png" href="img/animal.png">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+
+<body>
+
+    <!-- BACKGROUND VIDEO -->
+    <video autoplay muted loop id="bg-video">
+        <source src="videos/video.mp4" type="video/mp4">
+    </video>
+
+    <div class="main-container">
+
+        <!-- LEFT SIDE -->
+        <div class="left-content">
+            <h1>AI Job Matcher </h1>
+            <p>
+                Find the best jobs based on your skills, experience, and location.
+                Get salary insights, career guidance, and AI-powered recommendations.
+            </p>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="auth-wrapper">
+            <div class="auth-box">
+
+                <!-- TOGGLE -->
+                <div class="toggle-container">
+                    <div class="slider"></div>
+                    <button id="loginBtn" class="active">Login</button>
+                    <button id="signupBtn">Signup</button>
+                </div>
+
+
+                <!-- FORMS -->
+                <div class="form-wrapper">
+
+                    <!-- LOGIN -->
+                    <form class="form">
+                        <h2>Welcome Back</h2>
+
+                        <div class="input-group">
+                            <input type="email" id="loginEmail" required>
+                            <label>Email</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="password" id="loginPass" required>
+                            <label>Password</label>
+                            <span onclick="togglePass('loginPass')">👁️</span>
+                        </div>
+
+                        <button type="button" onclick="login()">Login</button>
+                    </form>
+
+                    <!-- SIGNUP -->
+                    <form class="form">
+                        <h2>Create Account</h2>
+
+                        <div class="input-group">
+                            <input type="text" id="signupName" required>
+                            <label>Full Name</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="email" id="signupEmail" required>
+                            <label>Email</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="password" id="signupPass" required>
+                            <label>Password</label>
+                            <span onclick="togglePass('signupPass')">👁️</span>
+                        </div>
+
+                        <button type="button" onclick="register()">Signup</button>
+                    </form>
+
+
+                </div>
+                <!-- GOOGLE LOGIN -->
+                <div class="profile-box" id="profileBox" style="display:none;">
+                    <img id="userImg">
+                    <span id="userName"></span>
+                </div>
+
+                <div id="g_id_onload"
+                    data-client_id="964852972271-c71qf8ba3mub85j6ar0mqomfs2jslnn7.apps.googleusercontent.com"
+                    data-callback="handleGoogleResponse" data-auto_prompt="false">
+                </div>
+
+                <div class="google-btn-container">
+                    <div class="g_id_signin" data-type="standard" data-shape="pill" data-theme="filled_blue"
+                        data-text="continue_with" data-size="large" data-logo_alignment="left">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="js/auth.js"></script>
+    <script src="js/toggle.js"></script>
+
+</body>
+
+</html>
