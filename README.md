@@ -4,9 +4,9 @@
 🌐 Live Demo
 
 
-🚀 Frontend: https://finalyear-project-github-io.vercel.app
+🚀 Frontend: https://final-year-github-io.vercel.app/
 
-⚙️ Backend: https://finalyear-project-github-io.onrender.com
+⚙️ Backend: https://final-year-github-io.onrender.com
 
 🎥 Preview
 <p align="center"> <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" width="600"/> </p>
