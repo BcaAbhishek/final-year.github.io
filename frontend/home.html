@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="icon" type="image/png" href="img/web.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
 
     <!-- NAVBAR -->
@@ -17,24 +19,18 @@
             <span class="nav-logo-name">AI Resume Analyzer</span>
         </a>
         <div class="nav-actions">
-            <!-- Shown when NOT logged in -->
-            <div id="authButtons" style="display:none;gap:0.75rem">
-                <button class="nav-btn nav-btn-ghost" onclick="window.location.href='index.html'">Sign In</button>
+
+            <div id="authButtons" style="display:flex;">
+                <button class="nav-btn nav-btn-ghost" onclick="window.location.href='index.html'">
+                    Login
+                </button>
             </div>
-            <!-- Shown when logged in -->
+
             <div class="nav-user" id="userMenu" style="display:none;">
                 <span class="nav-username" id="navUsername"></span>
-                <div class="dropdown">
-                    <div class="nav-avatar" id="navAvatar">A</div>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item">👤 Profile</a>
-                        <a class="dropdown-item">⚙️ Settings</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item danger" onclick="logout()">🚪 logOut</a>
-                    </div>
-                </div>
+                <div class="nav-avatar" id="navAvatar">A</div>
+                <button class="nav-btn nav-btn-ghost" onclick="logout()">Logout</button>
             </div>
-        </div>
     </nav>
 
     <!-- HERO -->
@@ -57,11 +53,26 @@
     <!-- RESULTS — hidden until analysis done -->
     <section class="results" style="display:none;">
         <div class="dashboard-container">
-            <div class="card"><h3>🧠 Skills</h3><p id="skills"></p></div>
-            <div class="card"><h3>💼 Job Roles</h3><p id="roles"></p></div>
-            <div class="card"><h3>💰 Salary</h3><p id="salary"></p></div>
-            <div class="card"><h3>🌍 Best Cities</h3><p id="cities"></p></div>
-            <div class="card"><h3>📈 Improvements</h3><p id="improve"></p></div>
+            <div class="card">
+                <h3>🧠 Skills</h3>
+                <p id="skills"></p>
+            </div>
+            <div class="card">
+                <h3>💼 Job Roles</h3>
+                <p id="roles"></p>
+            </div>
+            <div class="card">
+                <h3>💰 Salary</h3>
+                <p id="salary"></p>
+            </div>
+            <div class="card">
+                <h3>🌍 Best Cities</h3>
+                <p id="cities"></p>
+            </div>
+            <div class="card">
+                <h3>📈 Improvements</h3>
+                <p id="improve"></p>
+            </div>
         </div>
         <canvas id="salaryChart"></canvas>
         <h2>📜 Previous Analyses</h2>
@@ -94,9 +105,10 @@
             <button class="cb-qr">View previous analyses</button>
         </div>
         <div id="chat-input-area">
-            <input id="chat-input" type="text" placeholder="Ask me anything…" autocomplete="off"/>
+            <input id="chat-input" type="text" placeholder="Ask me anything…" autocomplete="off" />
             <button id="chat-send-btn" aria-label="Send">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
                     <line x1="22" y1="2" x2="11" y2="13"></line>
                     <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                 </svg>
@@ -106,17 +118,21 @@
     </div>
 
     <button id="chat-bubble" aria-label="Open chat assistant">
-        <svg class="cb-icon-open" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="cb-icon-open" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
         </svg>
-        <svg class="cb-icon-close" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round">
-            <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+        <svg class="cb-icon-close" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"
+            stroke-linecap="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
         <div id="chat-badge" class="cb-hidden">1</div>
     </button>
 
     <script src="js/index.js"></script>
     <script src="js/chatbot.js"></script>
-    
+
 </body>
+
 </html>
