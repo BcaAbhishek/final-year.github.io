@@ -1,4 +1,4 @@
-const API = "https://finalyear-project-github-io.onrender.com";
+const API = "https://final-year-github-io.onrender.com";
 let salaryChartInstance = null;
 
 /* ── UPLOAD & ANALYZE ── */
